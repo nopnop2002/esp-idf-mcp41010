@@ -54,3 +54,6 @@ If you connect to Low terminals = Gnd and High terminals = 5V, 0 to 5V is output
 See [here](https://github.com/sleemanj/MCP41_Simple).
 
 
+# Reference
+https://github.com/nopnop2002/esp-idf-x9c103
+
