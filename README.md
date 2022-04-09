@@ -37,8 +37,8 @@ idf.py flash
 |Circuit|MCP||ESP32|ESP32-S2|ESP32-C3|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 ||CS|--|GPIO5|GPIO34|GPIO5|
-||SCLK|--|GPIO18|GPIO36|GPIO1|
-||MOSI|--|GPIO23|GPIO35|GPIO0|
+||SCK|--|GPIO18|GPIO36|GPIO1|
+||SI|--|GPIO23|GPIO35|GPIO0|
 ||Vss|--|GND|GND|GND|
 |High terminals|PA0/PA1|--||||
 |Wiper terminals|PW0/PW1|--||||
