@@ -5,6 +5,8 @@ ESP32 has two 8-bit DAC (digital to analog converter) channels, connected to GPI
 However, the maximum voltage is up to VDD.   
 If you control a voltage up to 5V, you can use this.   
 
+And ESP32C3 core does not have a DAC function.   
+
 - MCP41010 = Single Digital Potentiometer (10 kOhms)   
 - MCP41050 = Single Digital Potentiometer (50 kOhms)   
 - MCP41100 = Single Digital Potentiometer (100 kOhms)   
