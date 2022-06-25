@@ -5,7 +5,7 @@ ESP32 has two 8-bit DAC (digital to analog converter) channels, connected to GPI
 However, the maximum voltage is up to VDD.   
 If you control a voltage up to 5V, you can use this.   
 
-And ESP32C3 core does not have a DAC function.   
+And ESP32Sx/ESP32Cx core does not have a DAC function.   
 
 - MCP41010 = Single Digital Potentiometer (10 kOhms)   
 - MCP41050 = Single Digital Potentiometer (50 kOhms)   
@@ -21,7 +21,7 @@ I ported from [here](https://github.com/sleemanj/MCP41_Simple).
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-mcp41010
 cd esp-idf-mcp41010
-idf.py set-target {esp32/esp32s2/esp32c3}
+idf.py set-target {esp32/esp32s2/esp32s3/esp32c3}
 idf.py menuconfig
 idf.py flash
 ```
@@ -36,7 +36,7 @@ idf.py flash
 
 # Wirering
 
-|Circuit|MCP||ESP32|ESP32-S2|ESP32-C3|
+|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C3|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 ||CS|--|GPIO5|GPIO34|GPIO5|
 ||SCK|--|GPIO18|GPIO36|GPIO1|
