@@ -16,6 +16,10 @@ And ESP32Sx/ESP32Cx core does not have a DAC function.
 
 I ported from [here](https://github.com/sleemanj/MCP41_Simple).   
 
+# Software requirements
+ESP-IDF V4.4/V5.0.   
+ESP-IDF V5 is required when using ESP32-C2.   
+
 # Installation
 
 ```Shell
@@ -62,8 +66,7 @@ __You can change it to any pin using menuconfig.__
 If you connect to Low terminals = Gnd and High terminals = 5V, 0 to 5V is output to Wiper terminals in 255 steps.   
 
 # Typical circuit
-![ESP32-mcp41xxx](https://user-images.githubusercontent.com/6020549/205483845-fed88458-fda2-4610-9f5e-ca5fd434a1f5.jpg)
-
+![ESP32-mcp41xxx](https://user-images.githubusercontent.com/6020549/222988540-2d1d70b7-2aa1-4e90-a3a2-1a9666512fef.jpg)
 
 # API
 See [here](https://github.com/sleemanj/MCP41_Simple).
