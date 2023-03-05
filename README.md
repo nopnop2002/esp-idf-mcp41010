@@ -21,7 +21,7 @@ I ported from [here](https://github.com/sleemanj/MCP41_Simple).
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-mcp41010
 cd esp-idf-mcp41010
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c3}
+idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3}
 idf.py menuconfig
 idf.py flash
 ```
@@ -29,14 +29,24 @@ idf.py flash
 
 # Configuration   
 
-![config-top](https://user-images.githubusercontent.com/6020549/162594830-9db662c0-27e8-4335-95bd-0a5836e913b3.jpg)
-![config-mcp41010-1](https://user-images.githubusercontent.com/6020549/162594833-d3f2a8db-cf0c-40f1-be8b-eadece28e402.jpg)
+![config-top](https://user-images.githubusercontent.com/6020549/222987838-0dd807c2-e6cb-45ec-9f2e-06a08ebb0504.jpg)
+![config-mcp41010-1](https://user-images.githubusercontent.com/6020549/222987853-4be43700-ef92-4338-a19d-7fc6a5b4885e.jpg)
 ![config-mcp41010-2](https://user-images.githubusercontent.com/6020549/162594835-f059f585-567d-410a-9339-5a962c6d7f8d.jpg)
 
+# SPI BUS selection   
+![config-mcp41010-3](https://user-images.githubusercontent.com/6020549/222987872-4e9a662c-f051-49a9-a1b8-aff97bda3547.jpg)
+
+The ESP32 series has three SPI BUSs.   
+SPI1_HOST is used for communication with Flash memory.   
+You can use SPI2_HOST and SPI3_HOST freely.   
+When you use SDSPI(SD Card via SPI), SDSPI uses SPI2_HOST BUS.   
+When using this module at the same time as SDSPI or other SPI device using SPI2_HOST, it needs to be changed to SPI3_HOST.   
+When you don't use SDSPI, both SPI2_HOST and SPI3_HOST will work.   
+Previously it was called HSPI_HOST / VSPI_HOST, but now it is called SPI2_HOST / SPI3_HOST.   
 
 # Wirering
 
-|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C3|
+|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C2/C3|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 ||CS|--|GPIO5|GPIO34|GPIO5|
 ||SCK|--|GPIO18|GPIO36|GPIO1|
