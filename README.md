@@ -63,7 +63,7 @@ Previously it was called HSPI_HOST / VSPI_HOST, but now it is called SPI2_HOST /
 
 __You can change it to any pin using menuconfig.__   
 
-If you connect to Low terminals = Gnd and High terminals = 5V, 0 to 5V is output to Wiper terminals in 255 steps.   
+If you connect to Low terminals = Gnd and High terminals = 3.3V, 0 to 3.3V is output to Wiper terminals in 255 steps.   
 
 # Typical circuit
 ![ESP32-mcp41xxx](https://user-images.githubusercontent.com/6020549/222988540-2d1d70b7-2aa1-4e90-a3a2-1a9666512fef.jpg)
