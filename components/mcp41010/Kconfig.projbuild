@@ -7,6 +7,7 @@ menu "MCP41010 Configuration"
 		default 48 if IDF_TARGET_ESP32S3
 		default 18 if IDF_TARGET_ESP32C2
 		default 19 if IDF_TARGET_ESP32C3
+		default 30 if IDF_TARGET_ESP32C6
 
 	choice MODEL
 		prompt "Model"
@@ -44,7 +45,7 @@ menu "MCP41010 Configuration"
 		range 0 GPIO_RANGE_MAX
 		default 23 if IDF_TARGET_ESP32
 		default 35 if IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3
-		default 0  if IDF_TARGET_ESP32C3 || IDF_TARGET_ESP32C2
+		default  2 # C3 and others
 		help
 			GPIO number (IOxx) to SPI MOSI.
 			Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to MOSI.
@@ -56,7 +57,7 @@ menu "MCP41010 Configuration"
 		range 0 GPIO_RANGE_MAX
 		default 18 if IDF_TARGET_ESP32
 		default 36 if IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3
-		default 1  if IDF_TARGET_ESP32C3 || IDF_TARGET_ESP32C2
+		default  3 # C3 and others
 		help
 			GPIO number (IOxx) to SPI SCLK.
 			Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to SCLK.
@@ -66,9 +67,9 @@ menu "MCP41010 Configuration"
 	config CS_GPIO
 		int "CS GPIO number"
 		range 0 GPIO_RANGE_MAX
-		default 5  if IDF_TARGET_ESP32
+		default  5 if IDF_TARGET_ESP32
 		default 34 if IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3
-		default 5  if IDF_TARGET_ESP32C3 || IDF_TARGET_ESP32C2
+		default  1 # C3 and others
 		help
 			GPIO number (IOxx) to SPI CS.
 			Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to CS.

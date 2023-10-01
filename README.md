@@ -17,15 +17,16 @@ And ESP32Sx/ESP32Cx core does not have a DAC function.
 I ported from [here](https://github.com/sleemanj/MCP41_Simple).   
 
 # Software requirements
-ESP-IDF V4.4/V5.0.   
+ESP-IDF V4.4/V5.x.   
 ESP-IDF V5.0 is required when using ESP32-C2.   
+ESP-IDF V5.1 is required when using ESP32-C6.   
 
 # Installation
 
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-mcp41010
 cd esp-idf-mcp41010
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3}
+idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
 ```
@@ -50,11 +51,11 @@ Previously it was called HSPI_HOST / VSPI_HOST, but now it is called SPI2_HOST /
 
 # Wirering
 
-|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C2/C3|
+|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C2/C3/C6|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-||CS|--|GPIO5|GPIO34|GPIO5|
-||SCK|--|GPIO18|GPIO36|GPIO1|
-||SI|--|GPIO23|GPIO35|GPIO0|
+||CS|--|GPIO5|GPIO34|GPIO1|
+||SCK|--|GPIO18|GPIO36|GPIO3|
+||SI|--|GPIO23|GPIO35|GPIO2|
 ||Vss|--|GND|GND|GND|
 |High terminals|PA0/PA1|--||||
 |Wiper terminals|PW0/PW1|--||||
