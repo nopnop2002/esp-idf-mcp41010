@@ -2,10 +2,11 @@
 Three-Wire Digitally Controlled Potentiometer driver for ESP-IDF.   
 
 ESP32 has two 8-bit DAC (digital to analog converter) channels, connected to GPIO25 (Channel 1) and GPIO26 (Channel 2).   
+ESP32S2 has two 8-bit DAC (digital to analog converter) channels, connected to GPIO17 (Channel 1) and GPIO18 (Channel 2).   
 However, the maximum voltage is up to VDD.   
 If you control a voltage up to 5V, you can use this.   
 
-And ESP32Sx/ESP32Cx core does not have a DAC function.   
+And ESP32S3/ESP32Cx core does not have a DAC function.   
 
 - MCP41010 = Single Digital Potentiometer (10 kOhms)   
 - MCP41050 = Single Digital Potentiometer (50 kOhms)   
