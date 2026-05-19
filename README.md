@@ -27,7 +27,6 @@ ESP-IDF V5.1 is required when using ESP32-C6.
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-mcp41010
 cd esp-idf-mcp41010
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
 ```
@@ -52,7 +51,7 @@ Previously it was called HSPI_HOST / VSPI_HOST, but now it is called SPI2_HOST /
 
 # Wiring
 
-|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-C2/C3/C6|
+|Circuit|MCP||ESP32|ESP32-S2/S3|ESP32-Cx/Hx|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 ||CS|--|GPIO5|GPIO34|GPIO1|
 ||SCK|--|GPIO18|GPIO36|GPIO3|
